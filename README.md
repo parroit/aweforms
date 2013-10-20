@@ -1,4 +1,4 @@
-# aweforms [![Build Status](https://secure.travis-ci.org/parroit/aweforms.png?branch=master)](http://travis-ci.org/parroit/aweforms)
+# aweforms [![Build Status](https://secure.travis-ci.org/parroit/aweforms.png?branch=master)](http://travis-ci.org/parroit/aweforms) [![Npm module](https://badge.fury.io/js/aweforms.png)](https://npmjs.org/package/aweforms)
 
 mustache lambdas to create bootstrap forms
 
@@ -17,11 +17,13 @@ _(Coming soon)_
 _(Coming soon)_
 
 ## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
+In lieu of a formal styleguide, take care to maintain the existing coding style.
+Add unit tests for any new or changed functionality.
+Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
 _(Nothing yet)_
 
 ## License
-Copyright (c) 2013 parroit  
+Copyright (c) 2013 Andrea Parodi
 Licensed under the MIT license.
