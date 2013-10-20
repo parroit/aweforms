@@ -1,0 +1,44 @@
+{
+    "name": "aweforms",
+    "description": "mustache lambdas to create bootstrap forms",
+    "version": "0.1.0",
+    "homepage": "https://github.com/parroit/aweforms",
+    "author": {
+        "name": "parroit",
+        "email": "andrea.parodi@ebansoftware.net"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/parroit/aweforms.git"
+    },
+    "bugs": {
+        "url": "https://github.com/parroit/aweforms/issues"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/parroit/aweforms/blob/master/LICENSE-MIT"
+        }
+    ],
+    "main": "lib/aweforms",
+    "engines": {
+        "node": ">= 0.8.0"
+    },
+    "scripts": {
+        "test": "grunt"
+    },
+    "devDependencies": {
+        "grunt": "~0.4.1",
+        "grunt-mocha-test": "~0.7.0",
+        "chai": "~1.8.0",
+        "sinon": "~1.7.3",
+        "sinon-chai": "~2.4.0"
+    },
+    "dependencies": {
+        "hogan.js": ">=2.0.0",
+        "cheerio": "~0.12.3",
+        "i18n": "~0.4.1",
+        "lodash": "~2.2.1"
+    },
+    "keywords": ["mustache","lambdas", "bootstrap", "form","helper","hogan","hogan.js"]
+}
