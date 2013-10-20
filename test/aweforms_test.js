@@ -204,7 +204,7 @@ describe('aweforms', function () {
 
             var template = hogan.compile('{{#af.field}}<input type="checkbox" id="user.test">{{/af.field}}');
 
-            var testModelCheckBox = _.extend({}, testModel);
+            var testModelCheckBox = _.cloneDeep(testModel);
             testModelCheckBox.user.test = true;
             var result = template.render(testModelCheckBox);
             var $ = cheerio.load(expected);
@@ -220,7 +220,7 @@ describe('aweforms', function () {
 
             var template = hogan.compile('{{#af.field}}<input type="checkbox" id="user.test">{{/af.field}}');
 
-            var testModelCheckBox = _.extend({}, testModel);
+            var testModelCheckBox = _.cloneDeep(testModel);
             testModelCheckBox.user.test = false;
             var result = template.render(testModelCheckBox);
             var $ = cheerio.load(expected);
@@ -229,6 +229,26 @@ describe('aweforms', function () {
                 .removeAttr("value");
 
             expect(result).to.be.equal($.html());
+        });
+
+        it("readonly fields rendered without name", function () {
+
+            var template = hogan.compile('{{#af.field}}<input readonly="readonly" type="text" id="user.test">{{/af.field}}');
+
+            var result = template.render(testModel);
+
+
+            var expected = '<div class="field text-error">' +
+                '<label for="user.test">' +
+                'aLabel' +
+                '</label>' +
+                '<div>' +
+                '<input readonly="readonly" type="text" id="user.test" value="ciao">' +
+                '<span class="error">a test error</span>' +
+                '</div>' +
+                '</div>';
+
+            expect(result).to.be.equal(expected);
         });
     });
 });
