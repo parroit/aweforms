@@ -162,14 +162,18 @@ For an example of usage with Express js, see [ecm-revoluted](https://github.com/
 For an example of standalone usage, see [test file](https://github.com/parroit/aweforms/blob/master/test/aweforms_test.js)
 
 ## Contributing
+
 In lieu of a formal styleguide, take care to maintain the existing coding style.
+
 Add unit tests for any new or changed functionality.
+
 Please use mocha and grunt to test your code.
+
 Existing test could be found on *test* folder.
 
 ## Release History
 
-Please see (History.md)[History.md]
+Please see [History.md](History.md)
 
 ## License
 Copyright (c) 2013 Andrea Parodi
