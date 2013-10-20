@@ -153,6 +153,38 @@ describe('aweforms', function () {
             expect(result).to.be.equal($.html());
         });
 
+        it("set rendered selected option when input type is select and value is in list", function () {
+
+            var template = hogan.compile(
+                '{{#af.field}}' +
+                    '<select id="user.test">' +
+                        '{{#options}}<option value="{{v}}">{{t}}</option>{{/options}}' +
+                    '</select>' +
+
+                    '{{/af.field}}'
+            );
+
+            var testModelSelect = _.cloneDeep(testModel);
+            testModelSelect.user.test = "B";
+            testModelSelect.options = [
+
+                {v:"A",t:"AA"},
+                {v:"B",t:"BB"}
+            ];
+            var result = template.render(testModelSelect);
+            var $ = cheerio.load(expected);
+            $("input").parent("div").html(
+                '<select id="user.test" name="test">' +
+                    '<option value="A">AA</option>' +
+                    '<option value="B" selected="selected">BB</option>' +
+                    '</select>' +
+                    '<span class="error">a test error</span>'
+
+            );
+            //console.log($.html());
+            expect(result).to.be.equal($.html());
+        });
+
         it("doesn't set errors if model is correct", function () {
 
 
